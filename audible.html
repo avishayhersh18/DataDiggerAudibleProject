@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <title>אחזור מידע – פרויקט להגשה – אביב התשפ"ד</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: right;
+        background-color: #f0f4f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 10px;
+      }
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        background-color: #ff8c00;
+        padding: 20px;
+      }
+      .section {
+        margin-bottom: 20px;
+        padding: 20px;
+        /* background-color: #fff; */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      p {
+        font-size: 1.1em;
+        color: #555;
+      }
+      ul {
+        list-style-type: disc;
+        margin: 10px 0 20px 20px;
+      }
+      ul li {
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #ecf0f1;
+      }
+      th,
+      td {
+        border: 1px solid #bdc3c7;
+        padding: 12px;
+        text-align: center;
+      }
+      th {
+        background-color: #ff8c00;;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      a {
+        color: #ff8c00;;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .contributors {
+        font-size: 1.2em;
+        color: #2c3e50;
+        text-align: center;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>אחזור מידע – פרויקט להגשה – אביב התשפ"ד</h1>
+    <h2>1. מהו תחום העיסוק המרכזי של האתר? מהו המידע הזמין למשתמשי האתר?</h2>
+    <p>
+      האתר Audible מתמחה במכירת והשכרת ספרים מוקלטים (אודיובוקס) ופודקאסטים. הוא
+      מספק למשתמשים גישה למגוון רחב של תוכן מוקלט, הכולל ספרי קריאה, תכנים
+      חינוכיים, והפקות מקוריות.<br />
+      <a href="https://www.audible.com">קישור לאתר</a>
+    </p>
+    <h2>2. שלוש שאילתות מעניינות</h2>
+    <ul>
+      <li>What are the annual sales of books in Israel?</li>
+      <li>Sales Records divided to regions</li>
+      <li>What is the most popular book in Israel?</li>
+    </ul>
+    <h2>3. זחלן</h2>
+    <p>
+      בנו זחלן המחזיר את התוצאות לשאילתות שהגדרתם.
+      <a
+        href="https://github.com/yuvalzohar36/DataDiggersHw2/blob/main/HW2/WebScraperAudible.ipynb"
+        >קוד הזחלן</a
+      >
+    </p>
+    <section>
+      <h2>בנו זחלן המחזיר את התוצאות לשאילתות שהגדרתם</h2>
+      <p>
+        הזחלן בנוי בפייתון ומשתמש בספריות BeautifulSoup ו-Pandas לחילוץ וניתוח
+        נתונים מאתר Audible. קוד הזחלן זמין
+        <a
+          href="https://github.com/yuvalzohar36/DataDiggersHw2/blob/main/HW2/WebScraperAudible.ipynb"
+          target="_blank"
+          >כאן</a
+        >.
+      </p>
+    </section>
+    <section>
+      <h2>4. טכנולוגיות שונות מעניינות שהשתמשתם בהם בפרויקט</h2>
+      <p>
+        במהלך בניית הזחלן השתמשנו בשני טכנולוגיות מעניינות – BeautifulSoup
+        ו-Pandas.
+      </p>
+      <h3>BeautifulSoup</h3>
+      <p>
+        BeautifulSoup היא ספריית Python המשמשת לניתוח מסמכי HTML ו-XML. ספרייה
+        זו מאפשרת ביצוע של תהליך של web scraping בכך שהיא מאפשרת לחלץ ולתפעל
+        בקלות נתונים מדפי אינטרנט (HTML). בזחלן שבנינו לשליפת נתונים מאתר
+        Audible, הספרייה אפשרה לנו "לחפש" ספרים ספציפיים ולאסוף עליהם מידע כמו
+        כותרות של הספרים, שמות הסופרים, דירוגים הספרים ותיאוריהם על ידי איתור
+        רכיבי HTML ספציפיים והתוכן שלהם.
+      </p>
+      <h3>Pandas</h3>
+      <p>
+        Pandas היא ספריית Python שמאפשרת מניפולציות שונות וניתוח נתונים בכמויות
+        גדולות. ספרייה זו מספקת מבני נתונים כמו DataFrames המקלים על טיפול
+        וניתוח מאגרי נתונים גדולים. בזחלן שאנו בנינו, Pandas משמשת להמרת רשימות
+        של נתוני ספרים ל-DataFrames, מה שמאפשר לנו לפשט פעולות כמו סינון, מיון
+        ואיסוף של הנתונים. בנוסף, ספרייה זו מאפשרת בייצוא נתונים לקבצי Excel
+        בצורה קלה.
+      </p>
+    </section>
+    <section>
+      <h2>5. זמן ריצת השאילתות ואפשרויות לשיפור</h2>
+      <p>
+        כאשר ביצענו מדידה של הזמנים, הזמן שלקח לכלל השאילתות לרוץ כולל יבוא של
+        הנתונים הוא 7.74 שניות.
+      </p>
+      <p>
+        כעת נציג במה תלוי זמן הריצה וכיצד ניתן לשפר (אם ניתן) את זמן הריצה לכל
+        גורם:
+      </p>
+      <ul>
+        <li>
+          <strong>הפעולות שמבצעים על הנתונים:</strong> זמן הריצה מושפע ישירות
+          מהפעולות אותם מבצעים על הנתונים שאותם ייבאנו. במידה ועושים פעולות
+          מסובכות בכמויות גדולות, הדבר עלול להשפיע על זמני הריצה משום שחישובים
+          אלו עלולים לקחת זמן. במקרה שלנו ביצענו פעולות כמו סינון, מיון ואיסוף
+          של הנתונים באמצעות ספריית Pandas.
+        </li>
+        <li>
+          <strong>ביצועי הרשת:</strong> זמן הריצה מושפע ישירות מהביצועים של הרשת
+          בין המחשב לשרת שממנו אנו מביאים את הנתונים (מהירות הרשת וזמן התגובה של
+          השרת). יותר קשה לשפר את הביצועים אמנם ניתן לחסוך ככל הניתן בבקשות
+          לשרת.
+        </li>
+        <li>
+          <strong>כמויות הנתונים:</strong> עיבוד כמות גדולה של נתונים תגדיל את
+          זמן הייבוא שלהם וזמן הניתוח שמבצעים עליהם. כמות הנתונים תלויה באופן
+          ישיר משם הספר אותו אנו מחפשים. שימוש במבני נתונים יעילים ואלגוריתמים
+          יעילים מקצרים את זמן ביצוע השאילתה.
+        </li>
+        <li>
+          <strong>משאבי המערכת:</strong> זמן הניתוח והעיבוד על הנתונים אותם
+          ייבאנו תלוי באופן ישיר ממשאבי המערכת כגון: סוג המעבד, כמות הזיכרון
+          וכו'. קוד הזחלן הורץ בGoogle Colab, שמשתמש בשרתים של גוגל להרצת הקוד.
+          שיפור זמן הריצה ניתן בשימוש במחשבים חזקים יותר.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Inverted Index לשאילתות</h2>
+      <h3>
+        Query 1: Most common words in descriptions of fully valid books related
+        to 'It Ends with Us'
+      </h3>
+      <table>
+        <tr>
+          <th>Docs</th>
+          <th>Term</th>
+        </tr>
+        <tr>
+          <td>[1, 6, 10, 14, 20]</td>
+          <td>world</td>
+        </tr>
+        <tr>
+          <td>[1, 4, 10, 13, 14]</td>
+          <td>one</td>
+        </tr>
+        <tr>
+          <td>[2, 4, 7, 17, 19]</td>
+          <td>years</td>
+        </tr>
+        <tr>
+          <td>[1, 6, 8, 15]</td>
+          <td>us</td>
+        </tr>
+        <tr>
+          <td>[1, 10, 15]</td>
+          <td>love</td>
+        </tr>
+        <tr>
+          <td>[1, 11, 12]</td>
+          <td>means</td>
+        </tr>
+        <tr>
+          <td>[1, 5, 8]</td>
+          <td>often</td>
+        </tr>
+        <tr>
+          <td>[4, 6, 7]</td>
+          <td>follow</td>
+        </tr>
+        <tr>
+          <td>[4, 8, 14]</td>
+          <td>knows</td>
+        </tr>
+        <tr>
+          <td>[5, 9, 20]</td>
+          <td>new</td>
+        </tr>
+        <tr>
+          <td>[7, 10, 17]</td>
+          <td>life</td>
+        </tr>
+        <tr>
+          <td>[8, 12, 13]</td>
+          <td>every</td>
+        </tr>
+        <tr>
+          <td>[8, 12, 13]</td>
+          <td>good</td>
+        </tr>
+        <tr>
+          <td>[8, 12, 20]</td>
+          <td>book</td>
+        </tr>
+        <tr>
+          <td>[9, 13, 17]</td>
+          <td>dont</td>
+        </tr>
+      </table>
+      <h3>
+        Query 2: Most common words in descriptions of highly rated books related
+        to 'It Ends with Us'
+      </h3>
+      <table>
+        <tr>
+          <th>Docs</th>
+          <th>Term</th>
+        </tr>
+        <tr>
+          <td>[1, 4, 7]</td>
+          <td>new</td>
+        </tr>
+        <tr>
+          <td>[1, 2]</td>
+          <td>dont</td>
+        </tr>
+        <tr>
+          <td>[2, 7]</td>
+          <td>matter</td>
+        </tr>
+        <tr>
+          <td>[2, 7]</td>
+          <td>goals</td>
+        </tr>
+        <tr>
+          <td>[2, 3]</td>
+          <td>ones</td>
+        </tr>
+        <tr>
+          <td>[4, 7]</td>
+          <td>york</td>
+        </tr>
+        <tr>
+          <td>[5, 7]</td>
+          <td>life</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>know</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>relationship</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>women</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>experience</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>menstrual</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>abnormalities</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>pelvic</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>issues</td>
+        </tr>
+      </table>
+      <h3>
+        Query 3: Most common words in books by the most mentioned author related
+        to 'It Ends with Us'
+      </h3>
+      <table>
+        <tr>
+          <th>Docs</th>
+          <th>Term</th>
+        </tr>
+        <tr>
+          <td>[2, 4, 7, 8]</td>
+          <td>lily</td>
+        </tr>
+        <tr>
+          <td>[2, 4, 7, 8]</td>
+          <td>ryle</td>
+        </tr>
+        <tr>
+          <td>[1, 2, 5]</td>
+          <td>love</td>
+        </tr>
+        <tr>
+          <td>[1, 2, 5]</td>
+          <td>two</td>
+        </tr>
+        <tr>
+          <td>[2, 7, 8]</td>
+          <td>atlas</td>
+        </tr>
+        <tr>
+          <td>[2, 3, 6]</td>
+          <td>years</td>
+        </tr>
+        <tr>
+          <td>[2, 3, 5]</td>
+          <td>one</td>
+        </tr>
+        <tr>
+          <td>[2, 3, 4]</td>
+          <td>life</td>
+        </tr>
+        <tr>
+          <td>[1, 6]</td>
+          <td>doesnt</td>
+        </tr>
+        <tr>
+          <td>[1, 2]</td>
+          <td>first</td>
+        </tr>
+        <tr>
+          <td>[1, 2]</td>
+          <td>time</td>
+        </tr>
+        <tr>
+          <td>[1, 5]</td>
+          <td>could</td>
+        </tr>
+        <tr>
+          <td>[1, 4]</td>
+          <td>long</td>
+        </tr>
+        <tr>
+          <td>[2, 5]</td>
+          <td>much</td>
+        </tr>
+        <tr>
+          <td>[2, 5]</td>
+          <td>hate</td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>7. בחרו את אחת השאילתות, וחשבו tf-Idf של המושגים בשאילתא.</h2>
+      <h3>
+        Query 1: Most common words in the descriptions of fully valid books
+        related to 'It Ends with Us'
+      </h3>
+      <img src="tf-idf-results.png" alt="TF-IDF Calculation" />
+    </section>
+    <section>
+      <h2>8. האם בדפים שהוחזרו קיימים hubs? Authorities? נמקו.</h2>
+      <p>
+        בכלל התוצאות של השאילתות, אנו מבצעים בקשה מהאתר Audible, כאשר האתר
+        כשלעצמו מהווה Hub לספרים משום שהוא מאגד ומקשר למספר רב של ספרים, כולל
+        ספרים ממקורות שונים ומספק נתונים ומידע עליהם. כאשר אנו מקבלים מספר ספרים
+        בתור תוצאה לשאילתה, כל ספר בפרט הוא Authority משום שהוא מהווה מקור חשוב
+        ומוסמך בתחום שלו, עם דירוגים, ביקורות ומידע איכותי שמצביע על הרלוונטיות
+        והסמכותיות שלו בתחום הנושא שבו עוסק הספר.
+      </p>
+    </section>
+
+    <div class="section">
+      <h2>9. 	בחרו 10 דפים שהזחלן החזיר, ואשר יש ביניהם קישורים .חשבו pageRank  לכל דף, מומלץ להעזר בסקריפט מוכן. הציגו את החישובים ואת הדירוג הסופי. </h2>
+      <p>
+        10 ספרים אשר חזרו לנו לשאילתה כאשר חיפשנו את הספר "It ends with us" הם:
+      </p>
+      <ul>
+        <li>A Stolen Life</li>
+        <li>Bad Mormon</li>
+        <li>Healing the Shame That Binds You</li>
+        <li>Unf--k Your Brain</li>
+        <li>It Happened One Summer</li>
+        <li>George Orwell’s 1984</li>
+        <li>It Ends with Violence</li>
+        <li>A Court of Thorns and Roses</li>
+        <li>James Patterson, David Ellis</li>
+        <li>Think Twice</li>
+      </ul>
+
+      <p>
+        כעת, עבור כל ספר נגיד כמה קישורים יוצאים ממנו וכמה ספרים (מאלו שצוינו
+        למעלה) מצביעים עליו.
+      </p>
+      <table border="1" style="background-color: #141414;">
+        <tr>
+          <th>Book Number</th>
+          <th>Book name</th>
+          <th>Total Number of out-links</th>
+          <th>Number of points to me</th>
+          <th>Books number I link to</th>
+        </tr>
+        <tr>
+          <td>[2, 4]</td>
+          <td>3</td>
+          <td>2</td>
+          <td>A Stolen Life</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>[]</td>
+          <td>3</td>
+          <td>0</td>
+          <td>Bad Mormon</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>[]</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Healing the Shame That Binds You</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>[1]</td>
+          <td>1</td>
+          <td>1</td>
+          <td>Unf--k Your Brain</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>[1, 8]</td>
+          <td>2</td>
+          <td>2</td>
+          <td>It Happened One Summer</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>[7, 5]</td>
+          <td>1</td>
+          <td>2</td>
+          <td>George Orwell’s 1984</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>[6, 5]</td>
+          <td>1</td>
+          <td>2</td>
+          <td>It Ends with Violence</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>[2]</td>
+          <td>1</td>
+          <td>1</td>
+          <td>A Court of Thorns and Roses</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>[]</td>
+          <td>0</td>
+          <td>0</td>
+          <td>James Patterson, David Ellis</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>[1, 2]</td>
+          <td>0</td>
+          <td>2</td>
+          <td>Think Twice</td>
+          <td>10</td>
+        </tr>
+      </table>
+
+      <p>
+        על מנת לחשב השתמשנו בסקריפט קיים.<br />
+        כפי שראינו בהרצאה מקובל להשתמש בd = 0.85 לכן נגדיר ערך זה.<br />
+        N = 10 (מספר הדפים)<br />
+        R(j) של איטרציה מספר 1 (לכל j) = 1/10<br />
+        על מנת לקבוע את כמות האיטרציות הנדרשות ביצענו לכתחילה 100 איטרציות אך לא
+        ראינו שינוי בין איטרציה 50 ל100, לכן לאחר בדיקה משוערת, במקרה שלנו,
+        מספיק לגרף שלנו 30 איטרציות.<br />
+        נראה את התוצאות כפי שיצאו מהסקריפט:
+      </p>
+
+      <p>
+        Page ranks for iteration 1:<br />
+        ['0.248322', '0.248322', '0.020134', '0.077181', '0.134228', '0.077181',
+        '0.077181', '0.077181', '0.020134', '0.020134']
+      </p>
+      <p>
+        Page ranks for iteration 30:<br />
+        ['0.274901', '0.258965', '0.020113', '0.176878', '0.073422', '0.046768',
+        '0.046768', '0.061958', '0.020113', '0.020113']
+      </p>
+      <p>
+        Final PageRank after 30 iterations:<br />
+        Page 1: 0.274901<br />
+        Page 2: 0.258965<br />
+        Page 3: 0.020113<br />
+        Page 4: 0.176878<br />
+        Page 5: 0.073422<br />
+        Page 6: 0.046768<br />
+        Page 7: 0.046768<br />
+        Page 8: 0.061958<br />
+        Page 9: 0.020113<br />
+        Page 10: 0.020113
+      </p>
+
+      <p>
+        נראה דוגמא לחישוב עבור איטרציה 1 עבור ספר מס' 1:<br />
+        נחשב את התמורה של כל ספר שמצביע על ספר מס' 1 לדירוג של 1:<br />
+        ספרים 4,5,10 מצביעים לספר 1:
+      </p>
+      <ul>
+        <li>
+          ספר 4:<br />
+          R(4)=1/10 D(4)=1=>R(4)/D(4) =1/10
+        </li>
+        <li>
+          ספר 5:<br />
+          R(5)=1/10 D(5)=2=>(R(5))/(D(5))=1/20
+        </li>
+        <li>
+          ספר 10:<br />
+          R(10)=1/10 D(20)=2=>(R(10))/(D(10))=1/20
+        </li>
+      </ul>
+      <p>
+        לכן בסה"כ:<br />
+        R(1)=(1-0.85)/10+0.85*(1/10+1/20+1/20)=0.185<br />
+        ולאחר חישוב כלל הדירוג של הספרים והנירמול נקבל:<br />
+        R(1)=0.248322
+      </p>
+    </div>
+    <div class="section">
+      <h2>10.	הראו לשני משתמשים שונים את הדירוג מהסעיף הקודם, בקשו מהם לסמן relevance  feedback .</h2>
+      <p>
+        המשתמש הראשון בחר בדפים : 1,2<br />
+        המשתמש השני בחר בדפים :1,4,7<br />
+        נבצע feedback relevance עבור כל משתמש :
+      </p>
+      <p>
+        User1 : (0.274901+0.258965) /2 = 0.266<br />
+        User2 : (0.274901+0.176878+0.046768)/3 = 0.166<br />
+        Average : (0.266+0.166)/2 = 0.216
+      </p>
+      <p>
+        ה-10 ספרים הראשונים שחזרו נלקחו משאילתה :<br />
+        Query: most common words in the descriptions of fully valid books
+        related to 'It Ends with Us'
+      </p>
+      <p>
+        כלומר כדי לשפר את התוצאות נצטרך לשנות את השאילתא כך שהממוצע תוצאות
+        רלוונטיות עבור 2 משתמשים יהיה גדול מ-0.216 ובכך לשפר את התוצאות.
+      </p>
+    </div>
+    <section>
+      <h2>11. חישוב Recall ו-Precision</h2>
+       <img src="precision_recall1.png" alt="Precision and Recall Calculation Table">
+    <img src="precision_recall2.png" alt="Additional Data Related to Precision and Recall">
+</section>
+    </section>
+  </body>
+</html>

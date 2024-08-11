@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #141414; /* Dark background */
+  color: #fff; /* White text color */
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Align text to the left */
+}
+
+header {
+  background-color: #ff8c00; /* Orange */
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: black;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center; /* Centers the navigation links */
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row-reverse; /* Reverses the order of the navigation links */
+}
+
+ul li {
+  margin: 0 20px; /* Adjusts spacing between links */
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+  border-bottom: 2px solid #ff8c00; /* Orange */
+  padding-bottom: 10px;
+  text-align: left; /* Align headers to the left */
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center; /* Center the main title */
+  background-color: #ff8c00; /* Orange */
+  padding: 20px;
+}
+
+.section,
+.team {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  color: #141414; /* Black text for light background sections */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align section text to the left */
+}
+
+.team-member {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px; /* Right margin for RTL */
+}
+
+.team-member img {
+  width: 150px; /* Smaller size for profile pictures */
+  height: auto;
+}
+
+footer {
+  text-align: center; /* Center footer content */
+  padding: 20px 0;
+  background-color: #ff8c00; /* Orange footer */
+}

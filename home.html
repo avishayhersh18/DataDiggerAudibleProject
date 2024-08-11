@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        color: #333;
+        background-color: #f0f4f8; /* Light background color */
+      }
+      h1,
+      h2 {
+        color: #ff8c00; /* Orange */
+      }
+      .team {
+        display: flex; /* Use flexbox to align items in a row */
+        justify-content: center; /* Center the items horizontally */
+        margin-bottom: 20px;
+      }
+      .team-member {
+        text-align: center;
+        flex: 1; /* Make all team member elements take equal space */
+      }
+      .team-member img {
+        width: 150px; /* Adjust size as necessary */
+        height: 1;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .section {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center-align the content */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="team">
+        <div class="team-member">
+          <h3>Avishai Hershkovitz</h3>
+          <img
+            src="student1.jpg"
+            alt="Avishai"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+        <div class="team-member">
+          <h3>Avihai Hadad</h3>
+          <img
+            src="student2.png"
+            alt="Avihai"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+        <div class="team-member">
+          <h3>Yuval Zohar</h3>
+          <img
+            src="student3.jpg"
+            alt="Yuval"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+      </section>
+
+      <section>
+        <img
+          src="audible_screenshot.png"
+          alt="Audible Site Screenshot"
+          style="width: 100%; height: 350px"
+        />
+      </section>
+    </main>
+  </body>
+</html>
