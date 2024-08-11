@@ -3,23 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>אחזור מידע – פרויקט להגשה – אביב התשפ"ד</title>
-
     <style>
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         direction: rtl;
         text-align: right;
-        background-color: #f0f4f8;
-        color: #333;
+        background-color: #141414; /* Updated background color */
+        color: #ccc; /* Lighter text for better contrast */
         margin: 0;
         padding: 0;
       }
-      h1,
-      h2,
-      h3 {
-        color: #2c3e50;
-        border-bottom: 2px solid #2c3e50;
+      h1, h2, h3 {
+        color: white;
+        border-bottom: 1px solid #ff8c00;
         padding-bottom: 10px;
       }
       h1 {
@@ -27,21 +24,23 @@
         text-align: center;
         background-color: #ff8c00;
         padding: 20px;
+        margin-bottom: 20px;
       }
       .section {
         margin-bottom: 20px;
         padding: 20px;
-        /* background-color: #fff; */
+        background-color: #252525; /* Slightly lighter than body for depth */
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       p {
         font-size: 1.1em;
-        color: #555;
+        color: #ddd; /* Light grey text */
       }
       ul {
         list-style-type: disc;
-        margin: 10px 0 20px 20px;
+        margin: 10px 0 20px 40px;
+        color: #ddd;
       }
       ul li {
         margin-bottom: 10px;
@@ -51,23 +50,22 @@
         border-collapse: collapse;
         margin-top: 20px;
         margin-bottom: 20px;
-        background-color: #ecf0f1;
+        background-color: #333;
       }
-      th,
-      td {
-        border: 1px solid #bdc3c7;
+      th, td {
+        border: 1px solid #444;
         padding: 12px;
         text-align: center;
+        color: #fff;
       }
       th {
-        background-color: #ff8c00;;
-        color: white;
+        background-color: #ff8c00;
       }
       tr:nth-child(even) {
-        background-color: #f2f2f2;
+        background-color: #292929;
       }
       a {
-        color: #ff8c00;;
+        color: #ff8c00;
         text-decoration: none;
       }
       a:hover {
@@ -75,7 +73,7 @@
       }
       .contributors {
         font-size: 1.2em;
-        color: #2c3e50;
+        color: #ff8c00;
         text-align: center;
         margin: 20px 0;
       }
@@ -88,7 +86,7 @@
       האתר Audible מתמחה במכירת והשכרת ספרים מוקלטים (אודיובוקס) ופודקאסטים. הוא
       מספק למשתמשים גישה למגוון רחב של תוכן מוקלט, הכולל ספרי קריאה, תכנים
       חינוכיים, והפקות מקוריות.<br />
-      <a href="https://www.audible.com">קישור לאתר</a>
+      <a href="https://www.audible.com" target="_blank">קישור לאתר</a>
     </p>
     <h2>2. שלוש שאילתות מעניינות</h2>
     <ul>
@@ -96,16 +94,7 @@
       <li>Sales Records divided to regions</li>
       <li>What is the most popular book in Israel?</li>
     </ul>
-    <h2>3. זחלן</h2>
-    <p>
-      בנו זחלן המחזיר את התוצאות לשאילתות שהגדרתם.
-      <a
-        href="https://github.com/yuvalzohar36/DataDiggersHw2/blob/main/HW2/WebScraperAudible.ipynb"
-        >קוד הזחלן</a
-      >
-    </p>
-    <section>
-      <h2>בנו זחלן המחזיר את התוצאות לשאילתות שהגדרתם</h2>
+    <h2>3. בנו זחלן המחזיר את התוצאות לשאילתות שהגדרתם</h2>
       <p>
         הזחלן בנוי בפייתון ומשתמש בספריות BeautifulSoup ו-Pandas לחילוץ וניתוח
         נתונים מאתר Audible. קוד הזחלן זמין
@@ -435,7 +424,7 @@
         כעת, עבור כל ספר נגיד כמה קישורים יוצאים ממנו וכמה ספרים (מאלו שצוינו
         למעלה) מצביעים עליו.
       </p>
-      <table border="1" style="background-color: #141414;">
+      <table border="1" >
         <tr>
           <th>Book Number</th>
           <th>Book name</th>
